@@ -6,9 +6,13 @@ Exercise 4
 #
 # TODO: Gather information about the source of the error and paste your findings here. E.g.:
 # - What is the expected vs. the actual output?
+# actual: RecursionError: maximum recursion depth exceeded in comparison expected: 4
 # - What error message (if any) is there?
+# RecursionError: maximum recursion depth exceeded in comparison
 # - What line number is causing the error?
+# 37
 # - What can you deduce about the cause of the error?
+# there is not a sufficient stop case for the recursion
 
 
 # PART 2: State Assumptions
@@ -16,9 +20,10 @@ Exercise 4
 # TODO: State your assumptions here or say them out loud to your partner ...
 # Make sure to be SPECIFIC about what each of your assumptions is!
 # HINT: It may help to draw a picture to clarify what your assumptions are.
+# 
 
 def binary_search(arr, element, low=0, high=None):
-      """Returns the index of the given element within the array by performing a binary search."""
+    """Returns the index of the given element within the array by performing a binary search."""
     if high == None:
         high = len(arr) - 1
 

@@ -6,20 +6,26 @@ Exercise 1
 #
 # TODO: Gather information about the source of the error and paste your findings here. E.g.:
 # - What is the expected vs. the actual output?
+# expected 4 actual IndexError: list index out of range
 # - What error message (if any) is there?
+# IndexError: list index out of range
 # - What line number is causing the error?
+# 23
 # - What can you deduce about the cause of the error?
+# line 27 accessing list_of_nums[i+1] on the last iteration goes out of bounds
 
 
 # PART 2: State Assumptions
 #
 # TODO: State your assumptions here or say them out loud to your partner ...
 # Make sure to be SPECIFIC about what each of your assumptions is!
+# variable i goes up to the last index of the list
 
 def find_largest_diff(list_of_nums):
     """Find the largest difference between *consecutive* numbers in a list."""
     largest_diff = 0
     for i in range(len(list_of_nums)):
+        print(i)
         diff = abs(list_of_nums[i] - list_of_nums[i+1])
         if diff > largest_diff:
             largest_diff = diff
